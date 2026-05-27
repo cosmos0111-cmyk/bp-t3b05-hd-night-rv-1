@@ -1,320 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홍대 유흥 후기 & 밤문화 꿀팁 가이드 - 솔직한 형들의 놀이터</title>
-    <meta name="description" content="홍대 유흥 후기 끝판왕! 클럽, 가라오케, 셔츠룸의 실시간 수질과 가성비 분석, 내돈내산으로 털어놓는 홍대 밤문화 생존 전략을 소개합니다.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: hsl(290, 100%, 60%);
-            --secondary: hsl(330, 100%, 60%);
-            --dark: hsl(260, 30%, 8%);
-            --card-bg: hsl(260, 30%, 14%);
-            --text: hsl(0, 0%, 95%);
-            --text-muted: hsl(260, 10%, 70%);
-            --border: hsl(290, 50%, 20%);
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: var(--dark);
-            color: var(--text);
-            font-family: 'Outfit', 'Noto Sans KR', sans-serif;
-            line-height: 1.7;
-            padding-bottom: 60px;
-        }
-        header {
-            background: linear-gradient(135deg, var(--dark), var(--card-bg));
-            border-bottom: 2px solid var(--border);
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: var(--primary);
-        }
-        .hero {
-            background: radial-gradient(circle at center, hsl(290, 40%, 15%), var(--dark));
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-            line-height: 1.2;
-        }
-        .hero h1 span {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-        }
-        .cta-btn {
-            display: inline-block;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none;
-            box-shadow: 0 5px 20px rgba(240, 46, 170, 0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(240, 46, 170, 0.6);
-        }
-        .main-content {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .intro-section {
-            margin-bottom: 50px;
-        }
-        .intro-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            border-left: 5px solid var(--primary);
-            padding-left: 15px;
-        }
-        .intro-section p {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-        }
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 25px;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-        .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--text);
-        }
-        .card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-        .reviews-section {
-            margin: 60px 0;
-            background: linear-gradient(135deg, var(--card-bg), var(--dark));
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-        }
-        .reviews-section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .review-card {
-            background-color: var(--dark);
-            border-left: 4px solid var(--secondary);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 0 12px 12px 0;
-        }
-        .review-card p {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        .review-author {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-        .info-bar {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            padding: 20px;
-            text-align: center;
-            font-weight: 800;
-            font-size: 1.4rem;
-            border-radius: 12px;
-            margin: 50px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-        .info-bar a {
-            color: #fff;
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #0b0614;
-            padding: 40px 20px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        footer p {
-            margin-bottom: 10px;
-        }
-        footer strong {
-            color: var(--text);
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .header-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            nav a {
-                margin: 0 10px;
-            }
-        }
-    </style>
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "홍대 유흥 후기 가이드",
-      "description": "홍대 지역 유흥, 클럽, 가라오케, 밤문화에 관한 솔직하고 생생한 내돈내산 후기와 가격 정보 제공.",
-      "telephone": "010-6279-0862",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "마포구 홍대",
-        "addressCountry": "KR"
-      },
-      "priceRange": "$$"
-    }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홍대 유흥 제대로 즐기기 | 홍대 유흥 후기 내돈내산 찐후기</title>
+  <meta name="description" content="매일 반복되는 지루한 일상과 직장 생활 속에서 쌓인 스트레스를 불태우고 짜릿하게 즐기고 싶은데, 어디로 가야 진짜 화끈하고 눈탱이 없이 안심하고 놀 수 있는지 몰라 헤맨 적 많지? 특히 우리 홍대 근처에서 화끈한 밤문화를 검색하면 온통 과장 낚시글들과 어설픈 홍보만 가...">
+  <meta name="keywords" content="홍대 유흥, 홍대 유흥 후기, 유흥 가성비, 홍대 밤문화">
+  <link rel="canonical" href="https://t3b05-hd-night-rv-1.pages.dev/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="홍대 유흥 제대로 즐기기 | 홍대 유흥 후기 내돈내산 찐후기">
+  <meta property="og:description" content="매일 반복되는 지루한 일상과 직장 생활 속에서 쌓인 스트레스를 불태우고 짜릿하게 즐기고 싶은데, 어디로 가야 진짜 화끈하고 눈탱이 없이 안심하고 놀 수 있는지 몰라 헤맨 적 많지? 특히 우리 홍대 근처에서 화끈한 밤문화를 검색하면 온통 과장 낚시글들과 어설픈 홍보만 가...">
+  <meta property="og:url" content="https://t3b05-hd-night-rv-1.pages.dev/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="bpaas-design-system" content="editorial-luxury">
+  <meta name="bpaas-design-theme" content="kr-editorial-luxury">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+      :root {
+        --bg: #faf9f6;
+        --fg: #1c1c1e;
+        --accent: #8a7355;
+        --muted: #6e6e73;
+        --border: #e5e5e0;
+      }
+      body { background: var(--bg); color: var(--fg); font-family: 'Noto Serif KR', serif; line-height: 1.8; }
+      header { border-bottom: 1px solid var(--border); padding: 20px 0; }
+      .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+      .hero { padding: 80px 0; text-align: left; border-bottom: 1px solid var(--border); }
+      .hero h1 { font-size: 3rem; font-weight: 400; color: var(--fg); margin-bottom: 24px; letter-spacing: -0.03em; }
+      .btn { display: inline-block; padding: 12px 36px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s; }
+      .btn:hover { background: var(--accent); color: #fff; }
+      .content-section { padding: 60px 0; }
+      .card { border-bottom: 1px solid var(--border); padding: 32px 0; }
+      .card h3 { font-size: 1.4rem; font-weight: 500; margin-bottom: 12px; }
+      .review-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
+      .review-card { border: 1px solid var(--border); padding: 24px; background: #fff; }
+    
+    table { width: 100%; border-collapse: collapse; margin-top: 24px; border: 1px solid var(--border); }
+    th, td { padding: 12px; border: 1px solid var(--border); text-align: center; }
+    th { background: rgba(0,0,0,0.02); font-weight: bold; }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 900; text-decoration: none; color: var(--fg); letter-spacing: -0.05em; }
+    nav a { color: var(--fg); text-decoration: none; font-weight: 700; margin-left: 12px; font-size: 0.9rem; }
+    nav a:hover { color: var(--accent); }
+    footer { border-top: 1px solid var(--border); padding: 40px 0; background: rgba(0,0,0,0.01); color: var(--muted); font-size: 0.85rem; }
+    footer .container { display: flex; justify-content: space-between; align-items: center; }
+    footer a { color: var(--muted); text-decoration: none; font-weight: bold; }
+    footer a:hover { color: var(--accent); }
+    .p-bar { background: var(--accent); color: #fff; padding: 10px 0; text-align: center; font-weight: 700; font-size: 0.95rem; }
+    .p-bar a { color: #fff; text-decoration: underline; }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"홍대 유흥 스페셜 센터","url":"https://t3b05-hd-night-rv-1.pages.dev","telephone":"010-6279-0862","priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"홍대","addressCountry":"KR"}}</script>
 </head>
 <body>
-
-<header>
-    <div class="header-container">
-        <div class="logo">Hongdae Bro</div>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="about.html">소개</a>
-            <a href="blog.html">블로그</a>
-        </nav>
+  <div class="p-bar">🚨 형님들 눈탱이 없는 리얼 정찰제 문의: <a href="tel:010-6279-0862">📞 010-6279-0862</a> (24시간 실시간 대기)</div>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">홍대.유흥</a>
+      <nav><a href="index.html">홈</a> | <a href="about.html">정보</a> | <a href="blog.html">블로그</a></nav>
     </div>
-</header>
-
-<section class="hero">
-    <h1>홍대 유흥 후기 <span>리얼 팩트 폭행</span></h1>
-    <p>삐까뻔쩍한 광고에 지친 형들을 위한 진짜 생생 정보! 호갱 안 당하고 가성비 챙기면서 제대로 노는 형들의 생존 가이드.</p>
-    <a href="tel:010-6279-0862" class="cta-btn">실시간 예약/상담: 010-6279-0862</a>
-</section>
-
-<div class="main-content">
-    <section class="intro-section">
-        <h2>내돈내산으로 털어놓는 홍대의 밤</h2>
-        <p>어이 형들, 반가워! 홍대 밤거리에서 수천만 원 태워가면서 깨달은 진짜 유용한 유흥 후기를 나누려고 판을 깔았어. 대형 포털 사이트나 SNS에 도배된 영혼 없는 바이럴 광고글에 낚여서 지갑 탈탈 털리고 기분 잡친 적 한두 번이 아니지? 나도 다 겪어봤어. 그래서 내가 직접 몸소 부딪치고 깨지면서 얻은 100% 리얼 정보만 골라서 형들한테 가감 없이 풀어줄게.</p>
-        <p>홍대는 매번 핫플레이스가 바뀌고 트렌드가 미친 속도로 흘러가잖아. 힙합 클럽부터 시작해서 아재 감성 풍기는 가라오케, 요즘 뜨는 셔츠룸까지! 각 업소별 분위기, 가격대, 수질까지 한눈에 보기 쉽게 싹 다 긁어모아 놨어. 쓸데없이 거품 낀 비용 다 걷어내고 정직하게 노는 법을 알고 싶다면 제대로 찾아온 거야.</p>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>홍대 유흥 후기</h1>
+        <p style="font-size:1.25rem; margin-bottom:30px; opacity:0.9;">20대 후반 ~ 30대 초반 직장인 형님들의 리얼 내돈내산 가성비 밤문화 힐링 아카이브</p>
+        <a href="tel:010-6279-0862" class="btn">실시간 예약 및 가격 확인 (전화걸기)</a>
+      </div>
     </section>
+    
+    <section class="content-section">
+      <div class="container">
+        <div class="card" style="border:none;">
+          <h2 style="font-size:2rem; margin-bottom:24px; color:var(--accent);">형이 솔직하게 털어놓는 홍대 밤문화 리얼 팩트</h2>
+          <p style="margin-bottom:20px; font-size:1.1rem; line-height:1.9;">매일 반복되는 지루한 일상과 직장 생활 속에서 쌓인 스트레스를 불태우고 짜릿하게 즐기고 싶은데, 어디로 가야 진짜 화끈하고 눈탱이 없이 안심하고 놀 수 있는지 몰라 헤맨 적 많지? 특히 우리 홍대 근처에서 화끈한 밤문화를 검색하면 온통 과장 낚시글들과 어설픈 홍보만 가득해서 시간 낭비였을 거임. 그래서 형이 상암 및 등촌 일대에서 가장 정직하고 물 좋은 유흥 꿀팁 정보와 실시간 연계 서비스를 싹 정리해서 공유해 줌. 내 동생들이 어디 가서 헛돈 쓰지 않고 최고의 만족도를 얻어갈 수 있도록 형이 뒤에서 모든 예약을 안전하고 스마트하게 케어해 줄 테니 안심하고 놀러 와라. 010-6279-0862 이 직통 번호 하나로 모든 상담과 예약이 논스톱으로 해결된다.</p>
+          <div style="background:rgba(0,0,0,0.01); border-left:4px solid var(--accent); padding:20px; margin:30px 0; font-style:italic;">
+            "형님들, 이상한 호객꾼(삐끼) 꼬임에 넘어가서 지하 어두컴컴한 지하실 끌려가서 양주 한 병에 백만 원씩 뜯기는 시대는 지났음. 형이 딱 가격 정찰제 걸고 에이스들만 매칭해 주니까 의심 말고 연락하길."
+          </div>
+          <p>유흥이라고 해서 다 똑같은 곳이 아님. 형은 오직 신뢰를 바탕으로 100% 가격 정찰제와 마인드 보장 제도를 적용한 검증된 핫플 업소들만 엄선해서 연계해 주고 있음. 현장에서 예산 오버되거나 불투명한 요금 때문에 기분 잡칠 일 전혀 없도록 투명하게 시작부터 끝까지 정밀 가이드해 준다. 친구들과의 모임, 특별한 이벤트, 혹은 독고로 조용히 힐링하고 싶은 밤 등 어떤 상황이든 맞춤형 룸 세팅과 최상의 매칭 서비스로 기대 이상의 밤을 선사해 줌.</p>
+      <p>특히 이곳 홍대 유흥 네트워크는 매주 수질 관리와 서비스 품격을 업그레이드하고 있어서 언제 방문해도 최상의 분위기 속에서 텐션 높게 놀 수 있음. 010-6279-0862 예약 번호로 편하게 카톡이나 전화 한 통 주시면 동생들이 가성비 넘치면서도 화끈하게 보낼 수 있는 최고의 코스를 즉석에서 예약 세팅해 줌. 어설픈 호객 행위에 낚여서 쓸데없이 내상 입고 머리 아파하지 말고, 믿을 수 있는 형 채널로 연락해서 클라스가 다른 마포 강서 일대 최고의 밤을 즐기길 바란다.</p>
+        </div>
 
-    <div class="info-bar">
-        🔥 홍대 유흥 실시간 예약 & 견적 상담: <a href="tel:010-6279-0862">010-6279-0862</a> (브로 소통)
+        <div style="margin-top:60px;">
+          <h2 style="font-size:2rem; margin-bottom:24px; color:var(--accent);">형님들이 직접 남겨주신 홍대 유흥 리얼 찐후기</h2>
+          <div class="review-grid">
+    <div class="review-card">
+      <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+        <strong>윤태호</strong>
+        <span style="color:#e0a82e;">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--muted);">상암 근처에서 유흥 꿀팁 찾다가 전화드렸는데 대만족했습니다. 가격 정직하고 예약 번호 010-6279-0862로 친절하게 다 알려주셔서 최고였음.</p>
+      <small style="display:block; margin-top:10px; color:#bbb;">작성일: 2026-05-18</small>
     </div>
-
-    <section class="intro-section">
-        <h2>홍대 밤문화 삼국지: 장르별 핵심 가성비 분석</h2>
-        <p>솔직히 홍대 오면 크게 세 가지 장르로 나뉘지. 클럽, 감성주점, 그리고 본격 가라오케/셔츠룸 계열. 각 구역마다 장단점이 극명하니까 형들 성향에 맞춰서 골라 가야 시간 낭비, 돈 낭비 안 한다고. 아래 요점 정리 싹 해둘 테니까 이동 전에 참고해봐.</p>
-        
-        <div class="card-grid">
-            <div class="card">
-                <h3>1. 감성주점 & 클럽</h3>
-                <p>20대 초중반 친구들의 성지. 가성비는 좋지만 웨이팅 헬이고, 솔직히 나이 좀 있는 형들은 들어가면 눈치 보임. 기 빨리고 춤만 주구장창 추다 올 거 아니면 주말에는 비추천한다. 기력을 챙기자 브로.</p>
-            </div>
-            <div class="card">
-                <h3>2. 럭셔리 가라오케</h3>
-                <p>지인들 모임이나 생일 파티 할 때 깔끔하게 대접받고 싶다면 정답. 정찰제 시스템이 많아서 호갱 당할 확률이 비교적 적고, 시설이 아주 고오급스러움. 음향 장비 빵빵하게 챙겨서 목청 터져라 부르기 딱 좋음.</p>
-            </div>
-            <div class="card">
-                <h3>3. 가성비 셔츠룸</h3>
-                <p>일반 노래방이나 가라오케의 지루함을 완전히 날려버릴 최고의 선택지. 요즘 홍대 쪽에서 미친 듯이 성행하고 있음. 확실한 매니저들의 마인드와 밀착 서비스 덕분에 내돈내산 만족도 200% 보장하는 트렌디 장르임.</p>
-            </div>
+  
+    <div class="review-card">
+      <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+        <strong>하동훈</strong>
+        <span style="color:#e0a82e;">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--muted);">내돈내산 진짜 후기입니다. 쓸데없는 추가 요금 일절 없고 코스 알차서 돈이 하나도 안 아깝네요.</p>
+      <small style="display:block; margin-top:10px; color:#bbb;">작성일: 2026-05-21</small>
+    </div>
+  
+    <div class="review-card">
+      <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+        <strong>오세훈</strong>
+        <span style="color:#e0a82e;">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--muted);">역시 형님이 추천해 주는 샵들은 차원이 다르네요. 덕분에 오랜만에 동창들이랑 찐하게 스트레스 풀고 왔습니다.</p>
+      <small style="display:block; margin-top:10px; color:#bbb;">작성일: 2026-05-25</small>
+    </div>
+  </div>
         </div>
+      </div>
     </section>
-
-    <section class="reviews-section">
-        <h2>홍대 주민 형들의 생생 후기 한마디</h2>
-        
-        <div class="review-card">
-            <p>"인터넷에서 홍대 유흥 후기 검색하다가 맨날 광고판이라 좌절했는데, 여기 브로 덕분에 진짜 저렴하게 풀코스로 제대로 달렸습니다. 눈탱이 하나도 없고 사장님이 너무 털털해서 단골 찜했습니다."</p>
-            <div class="review-author">- 마포구 헬스보이 (31세)</div>
-        </div>
-
-        <div class="review-card">
-            <p>"가라오케 예약 잡을 때 주말이라 걱정했는데 대기 시간 1도 없이 초특급 VIP 서비스로 들어갔네요. 안내해주신 꿀팁대로 노니까 술값도 생각보다 엄청 아꼈음. 최고예요!"</p>
-            <div class="review-author">- 홍대 직장인 김씨 (29세)</div>
-        </div>
-
-        <div class="review-card">
-            <p>"셔츠룸 시스템 처음 접해봤는데 다른 곳이랑 마인드 수준이 다릅니다. 이 가격에 이 정도 만족감이면 주말마다 도장깨기 하러 올 수밖에 없겠네요. 완전 추천합니다!"</p>
-            <div class="review-author">- 신촌 프로밤손님 (34세)</div>
-        </div>
-    </section>
-
-    <section class="intro-section">
-        <h2>호갱 탈출 3대 생존 강령</h2>
-        <p>홍대 밤거리를 다니다 보면 수많은 삐끼들이 유혹하지. 이들의 달콤한 말에 속아 아무 데나 따라갔다가는 계산서 보고 영혼까지 탈곡당하기 십상이야. 아래 세 가지만 딱 기억하고 다녀라.</p>
-        <p>첫째, 길거리 삐끼는 99.9% 거른다. 수수료 떼먹는 구조라 무조건 비싸짐. 둘째, 가기 전에 미리 예약 전화를 넣고 확실한 정찰제 가격을 확인해라. 셋째, 신뢰할 만한 로컬 부장이나 실장 번호를 한두 개 따서 직통으로 뚫어라. 그게 제일 편하고 싸게 먹힌다.</p>
-    </section>
-</div>
-
-<footer>
-    <p>상호: 홍대 브로 정보 센터 | 대표자: 홍대형님</p>
-    <p>문의 직통 전화: <strong>010-6279-0862</strong> (부재 시 문자 필수)</p>
-    <p>&copy; 2026 Hongdae Bro. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
-</footer>
-
+  </main>
+  <footer>
+    <div class="container">
+      <div>&copy; 2026 홍대 유흥 스페셜 가이드. All Rights Reserved.</div>
+      <div>
+        <a href="index.html">홈</a> | <a href="about.html">정보</a> | <a href="blog.html">블로그</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

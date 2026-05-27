@@ -1,163 +1,131 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홍대 브로 정보 센터 - 진짜 형들을 소개합니다</title>
-    <meta name="description" content="광고와 눈탱이 없는 진짜 홍대 밤문화를 전파하는 홍대 브로 정보 센터의 운영 철학을 공개합니다.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: hsl(290, 100%, 60%);
-            --secondary: hsl(330, 100%, 60%);
-            --dark: hsl(260, 30%, 8%);
-            --card-bg: hsl(260, 30%, 14%);
-            --text: hsl(0, 0%, 95%);
-            --text-muted: hsl(260, 10%, 70%);
-            --border: hsl(290, 50%, 20%);
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: var(--dark);
-            color: var(--text);
-            font-family: 'Outfit', 'Noto Sans KR', sans-serif;
-            line-height: 1.7;
-            padding-bottom: 60px;
-        }
-        header {
-            background: linear-gradient(135deg, var(--dark), var(--card-bg));
-            border-bottom: 2px solid var(--border);
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: var(--primary);
-        }
-        .main-content {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 30px;
-            border-left: 6px solid var(--primary);
-            padding-left: 20px;
-        }
-        p {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-        }
-        .highlight-box {
-            background: linear-gradient(135deg, var(--card-bg), var(--dark));
-            border: 1px dashed var(--secondary);
-            border-radius: 12px;
-            padding: 25px;
-            margin: 30px 0;
-        }
-        .team-profile {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 30px;
-        }
-        .team-profile h3 {
-            color: var(--secondary);
-            margin-bottom: 5px;
-        }
-        footer {
-            background-color: #0b0614;
-            padding: 40px 20px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: 80px;
-        }
-        footer p {
-            margin-bottom: 10px;
-        }
-        footer strong {
-            color: var(--text);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오시는 길 & 가격 정보 | 홍대 유흥 상세 매뉴얼</title>
+  <meta name="description" content="내 동생들이 밤문화 유흥 바닥에서 내상 당하고 돈 뜯기는 꼴은 눈에 흙이 들어와도 못 봄. 나 역시 20대 시절 어설프게 홍대 메인스트리트 골목을 방황하다가 삐끼한테 속아 지하실에서 싸구려 맥주 마시고 수백만 원 뜯겼던 아픈 과거가 있다. 그때 결심했지. 진짜 건강하고...">
+  <link rel="canonical" href="https://t3b05-hd-night-rv-1.pages.dev/about.html">
+  <meta name="bpaas-design-system" content="editorial-luxury">
+  <meta name="bpaas-design-theme" content="kr-editorial-luxury">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+      :root {
+        --bg: #faf9f6;
+        --fg: #1c1c1e;
+        --accent: #8a7355;
+        --muted: #6e6e73;
+        --border: #e5e5e0;
+      }
+      body { background: var(--bg); color: var(--fg); font-family: 'Noto Serif KR', serif; line-height: 1.8; }
+      header { border-bottom: 1px solid var(--border); padding: 20px 0; }
+      .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+      .hero { padding: 80px 0; text-align: left; border-bottom: 1px solid var(--border); }
+      .hero h1 { font-size: 3rem; font-weight: 400; color: var(--fg); margin-bottom: 24px; letter-spacing: -0.03em; }
+      .btn { display: inline-block; padding: 12px 36px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s; }
+      .btn:hover { background: var(--accent); color: #fff; }
+      .content-section { padding: 60px 0; }
+      .card { border-bottom: 1px solid var(--border); padding: 32px 0; }
+      .card h3 { font-size: 1.4rem; font-weight: 500; margin-bottom: 12px; }
+      .review-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
+      .review-card { border: 1px solid var(--border); padding: 24px; background: #fff; }
+    
+    table { width: 100%; border-collapse: collapse; margin-top: 24px; border: 1px solid var(--border); }
+    th, td { padding: 12px; border: 1px solid var(--border); text-align: center; }
+    th { background: rgba(0,0,0,0.02); font-weight: bold; }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 900; text-decoration: none; color: var(--fg); letter-spacing: -0.05em; }
+    nav a { color: var(--fg); text-decoration: none; font-weight: 700; margin-left: 12px; font-size: 0.9rem; }
+    nav a:hover { color: var(--accent); }
+    footer { border-top: 1px solid var(--border); padding: 40px 0; background: rgba(0,0,0,0.01); color: var(--muted); font-size: 0.85rem; }
+    footer .container { display: flex; justify-content: space-between; align-items: center; }
+    footer a { color: var(--muted); text-decoration: none; font-weight: bold; }
+    footer a:hover { color: var(--accent); }
+    .p-bar { background: var(--accent); color: #fff; padding: 10px 0; text-align: center; font-weight: 700; font-size: 0.95rem; }
+    .p-bar a { color: #fff; text-decoration: underline; }
+  </style>
 </head>
 <body>
-
-<header>
-    <div class="header-container">
-        <div class="logo">Hongdae Bro</div>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="about.html">소개</a>
-            <a href="blog.html">블로그</a>
-        </nav>
+  <div class="p-bar">🚨 형님들 눈탱이 없는 리얼 정찰제 문의: <a href="tel:010-6279-0862">📞 010-6279-0862</a> (24시간 실시간 대기)</div>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">홍대.유흥</a>
+      <nav><a href="index.html">홈</a> | <a href="about.html">정보</a> | <a href="blog.html">블로그</a></nav>
     </div>
-</header>
-
-<div class="main-content">
-    <h1>진짜 홍대형이 털어놓는 솔직함의 가치</h1>
-    <p>반갑다 브로! 홍대 브로 정보 센터에 온 걸 대환영해. 솔직히 이 사이트 왜 만들었냐고? 인터넷에 홍대 유흥 후기 치면 99%는 다 복사 붙여넣기 한 허접한 삐끼 광고글이잖아. 지도로 대충 위치만 찍어두고 엄청 친절한 척하면서 막상 전화하면 주말 요금이다 뭐다 덤터기 씌우는 꼬라지가 너무 꼴 보기 싫었어. 그래서 내가 직접 나섰지.</p>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>오시는 길 &amp; 투명한 가격 안내</h1>
+        <p style="font-size:1.25rem; opacity:0.9;">형이 직접 엄선한 최강의 코스 라인업과 100% 실명 정찰제 가격 테이블</p>
+      </div>
+    </section>
     
-    <div class="highlight-box">
-        <h3>우리의 생존 신조 세 가지</h3>
-        <p style="margin-top: 10px;">1. **정찰제 엄수:** 주말이라고 뒤통수 치는 추가 비용 절대 사절.<br>
-        2. **현장 리얼 브리핑:** 수질 개판이거나 대기 길면 오지 말라고 직구 날림.<br>
-        3. **브로맨스 의리:** 손님과 사장 관계가 아니라 오늘 하루 같이 꿀잼 찍을 파트너십.</p>
-    </div>
-
-    <p>우리는 홍대 로컬에서 다년간 산전수전 공중전까지 겪은 멤버들로 구성되어 있어. 어떤 코스로 달렸을 때 가장 돈값 하는지, 가라오케든 셔츠룸이든 업주들과 탄탄하게 다져놓은 인프라를 통해 누구보다 정직하고 확실한 가격을 보장해. 형들이 낸 피 같은 돈이 단 1원도 헛되이 쓰이지 않도록 든든한 방패막이가 되어줄게.</p>
-
-    <div class="team-profile">
-        <div>
-            <h3>홍대 총괄 마스터 브로</h3>
-            <p>언제든 편하게 카톡이나 전화 때려라. 형 동생 하듯이 홍대 유흥 실시간 상황 바로 공유해준다. 호갱 쉴드 가동 준비 완료!</p>
-            <p style="font-weight: 700; color: #fff; margin-top: 10px;">직통 전화: 010-6279-0862</p>
+    <section class="content-section">
+      <div class="container">
+        <div class="card">
+          <h2 style="font-size:2rem; margin-bottom:24px; color:var(--accent);">형이 샵을 직접 엄선하고 관리하게 된 리얼 스토리</h2>
+          <p style="font-size:1.1rem; line-height:1.9; margin-bottom:20px;">내 동생들이 밤문화 유흥 바닥에서 내상 당하고 돈 뜯기는 꼴은 눈에 흙이 들어와도 못 봄. 나 역시 20대 시절 어설프게 홍대 메인스트리트 골목을 방황하다가 삐끼한테 속아 지하실에서 싸구려 맥주 마시고 수백만 원 뜯겼던 아픈 과거가 있다. 그때 결심했지. 진짜 건강하고 유쾌한 밤문화를 위해 투명한 가이드가 되겠다고. 그렇게 구축된 정직한 유흥 직통 라인이 바로 010-6279-0862다.</p>
         </div>
+
+        <div class="card" style="margin-top:40px;">
+          <h2 style="font-size:2rem; margin-bottom:24px; color:var(--accent);">100% 투명 정찰제 요금표</h2>
+          <p style="font-size:1.05rem; color:var(--muted); margin-bottom:15px;">※ 카드로 결제하시든 현금으로 결제하시든 예약 특가 그대로 완벽 적용됩니다. 추가요금 요구 시 형이 전액 환불해 줌.</p>
+          
+        <table>
+          <thead>
+            <tr><th>유흥 추천 코스</th><th>시간</th><th>정상가</th><th>예약 특가 (010-6279-0862)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>스탠다드 캐주얼 코스 A</td><td>90분</td><td>160,000원</td><td><strong>140,000원</strong></td></tr>
+            <tr><td>럭셔리 VIP 골드 코스 B</td><td>90분</td><td>260,000원</td><td><strong>220,000원</strong></td></tr>
+            <tr><td>VVIP 프리미엄 풀 마스터 C</td><td>120분</td><td>390,000원</td><td><strong>330,000원</strong></td></tr>
+          </tbody>
+        </table>
+      
+          <div style="margin-top:30px; text-align:center;">
+            <a href="tel:010-6279-0862" class="btn">실시간 견적 및 즉시 예약: 📞 010-6279-0862</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:40px;">
+          <h2 style="font-size:2rem; margin-bottom:24px; color:var(--accent);">상세 위치 시그널 및 시설 안내</h2>
+          <p style="font-size:1.1rem; line-height:1.9;">상세 위치 및 편의성 안내: 홍대 역전 오거리 도보 1분 최고층 랜드마크 타워 내에 위치해 있어 뷰도 지리고 주차도 완전 쾌적합니다. 인근 맛집들과 2차 코스 연계가 개사기 수준이라 동선 짜기 너무 편함.</p>
+        </div>
+
+        <div style="margin-top:60px;">
+          <h2 style="font-size:2rem; margin-bottom:24px; color:var(--accent);">단골 고객 추천 실시간 찐소감</h2>
+          <div class="review-grid">
+    <div class="review-card">
+      <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+        <strong>박건우</strong>
+        <span style="color:#e0a82e;">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--muted);">위치가 너무 좋고 주차 편해서 모임 장소로 딱입니다. 형님 덕분에 진짜 좋은 곳 알아갑니다.</p>
+      <small style="display:block; margin-top:10px; color:#bbb;">작성일: 2026-05-23</small>
     </div>
-</div>
-
-<footer>
-    <p>상호: 홍대 브로 정보 센터 | 대표자: 홍대형님</p>
-    <p>문의 직통 전화: <strong>010-6279-0862</strong> (부재 시 문자 필수)</p>
-    <p>&copy; 2026 Hongdae Bro. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
-</footer>
-
+  
+    <div class="review-card">
+      <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+        <strong>한상우</strong>
+        <span style="color:#e0a82e;">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--muted);">당산동 유흥 꿀팁 믿고 예약 번호 010-6279-0862로 바로 상담하고 방문했는데 기대 이상의 밤이었습니다. 번창하세요!</p>
+      <small style="display:block; margin-top:10px; color:#bbb;">작성일: 2026-05-27</small>
+    </div>
+  </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div>&copy; 2026 홍대 유흥 스페셜 가이드. All Rights Reserved.</div>
+      <div>
+        <a href="index.html">홈</a> | <a href="about.html">정보</a> | <a href="blog.html">블로그</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
