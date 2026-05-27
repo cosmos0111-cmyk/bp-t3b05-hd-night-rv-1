@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍대 브로 정보 센터 - 진짜 형들을 소개합니다</title>
+    <meta name="description" content="광고와 눈탱이 없는 진짜 홍대 밤문화를 전파하는 홍대 브로 정보 센터의 운영 철학을 공개합니다.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: hsl(290, 100%, 60%);
+            --secondary: hsl(330, 100%, 60%);
+            --dark: hsl(260, 30%, 8%);
+            --card-bg: hsl(260, 30%, 14%);
+            --text: hsl(0, 0%, 95%);
+            --text-muted: hsl(260, 10%, 70%);
+            --border: hsl(290, 50%, 20%);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            padding-bottom: 60px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--card-bg));
+            border-bottom: 2px solid var(--border);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .main-content {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            border-left: 6px solid var(--primary);
+            padding-left: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, var(--card-bg), var(--dark));
+            border: 1px dashed var(--secondary);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .team-profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .team-profile h3 {
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+        footer {
+            background-color: #0b0614;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 80px;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        footer strong {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">Hongdae Bro</div>
+        <nav>
+            <a href="index.html">홈</a>
+            <a href="about.html">소개</a>
+            <a href="blog.html">블로그</a>
+        </nav>
+    </div>
+</header>
+
+<div class="main-content">
+    <h1>진짜 홍대형이 털어놓는 솔직함의 가치</h1>
+    <p>반갑다 브로! 홍대 브로 정보 센터에 온 걸 대환영해. 솔직히 이 사이트 왜 만들었냐고? 인터넷에 홍대 유흥 후기 치면 99%는 다 복사 붙여넣기 한 허접한 삐끼 광고글이잖아. 지도로 대충 위치만 찍어두고 엄청 친절한 척하면서 막상 전화하면 주말 요금이다 뭐다 덤터기 씌우는 꼬라지가 너무 꼴 보기 싫었어. 그래서 내가 직접 나섰지.</p>
+    
+    <div class="highlight-box">
+        <h3>우리의 생존 신조 세 가지</h3>
+        <p style="margin-top: 10px;">1. **정찰제 엄수:** 주말이라고 뒤통수 치는 추가 비용 절대 사절.<br>
+        2. **현장 리얼 브리핑:** 수질 개판이거나 대기 길면 오지 말라고 직구 날림.<br>
+        3. **브로맨스 의리:** 손님과 사장 관계가 아니라 오늘 하루 같이 꿀잼 찍을 파트너십.</p>
+    </div>
+
+    <p>우리는 홍대 로컬에서 다년간 산전수전 공중전까지 겪은 멤버들로 구성되어 있어. 어떤 코스로 달렸을 때 가장 돈값 하는지, 가라오케든 셔츠룸이든 업주들과 탄탄하게 다져놓은 인프라를 통해 누구보다 정직하고 확실한 가격을 보장해. 형들이 낸 피 같은 돈이 단 1원도 헛되이 쓰이지 않도록 든든한 방패막이가 되어줄게.</p>
+
+    <div class="team-profile">
+        <div>
+            <h3>홍대 총괄 마스터 브로</h3>
+            <p>언제든 편하게 카톡이나 전화 때려라. 형 동생 하듯이 홍대 유흥 실시간 상황 바로 공유해준다. 호갱 쉴드 가동 준비 완료!</p>
+            <p style="font-weight: 700; color: #fff; margin-top: 10px;">직통 전화: 010-6279-0862</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>상호: 홍대 브로 정보 센터 | 대표자: 홍대형님</p>
+    <p>문의 직통 전화: <strong>010-6279-0862</strong> (부재 시 문자 필수)</p>
+    <p>&copy; 2026 Hongdae Bro. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
+</footer>
+
+</body>
+</html>

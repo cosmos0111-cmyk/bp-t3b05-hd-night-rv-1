@@ -1,214 +1,320 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>애니 매니아 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍대 유흥 후기 & 밤문화 꿀팁 가이드 - 솔직한 형들의 놀이터</title>
+    <meta name="description" content="홍대 유흥 후기 끝판왕! 클럽, 가라오케, 셔츠룸의 실시간 수질과 가성비 분석, 내돈내산으로 털어놓는 홍대 밤문화 생존 전략을 소개합니다.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: hsl(290, 100%, 60%);
+            --secondary: hsl(330, 100%, 60%);
+            --dark: hsl(260, 30%, 8%);
+            --card-bg: hsl(260, 30%, 14%);
+            --text: hsl(0, 0%, 95%);
+            --text-muted: hsl(260, 10%, 70%);
+            --border: hsl(290, 50%, 20%);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            padding-bottom: 60px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--card-bg));
+            border-bottom: 2px solid var(--border);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .hero {
+            background: radial-gradient(circle at center, hsl(290, 40%, 15%), var(--dark));
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        .hero h1 span {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(240, 46, 170, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(240, 46, 170, 0.6);
+        }
+        .main-content {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .intro-section {
+            margin-bottom: 50px;
+        }
+        .intro-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary);
+            padding-left: 15px;
+        }
+        .intro-section p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        .reviews-section {
+            margin: 60px 0;
+            background: linear-gradient(135deg, var(--card-bg), var(--dark));
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+        .reviews-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .review-card {
+            background-color: var(--dark);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 12px 12px 0;
+        }
+        .review-card p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .review-author {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        .info-bar {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            padding: 20px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.4rem;
+            border-radius: 12px;
+            margin: 50px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .info-bar a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #0b0614;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        footer strong {
+            color: var(--text);
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "홍대 유흥 후기 가이드",
+      "description": "홍대 지역 유흥, 클럽, 가라오케, 밤문화에 관한 솔직하고 생생한 내돈내산 후기와 가격 정보 제공.",
+      "telephone": "010-6279-0862",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "마포구 홍대",
+        "addressCountry": "KR"
+      },
+      "priceRange": "$$"
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>애니 매니아 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>애니 매니아</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h3>
-          <p>90년대 셀 애니메이션 제작 시 빛이 뿌옇게 흐려지거나 번지는 몽환적인 효과를 내기 위해 투명 셀판 아래에 부드러운 백라이트를 대고 조리개를 조절해 이중 노출로 촬영하던 촬영 스튜...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h3>
-          <p>수많은 이세계 판타지 만화와 애니메이션에서 세계관의 핵심 축으로 등장하는 세계수 위그드라실 전승은 현대 서브컬처에 이르러 단순한 물리적 나무가 아닌 가상 데이터 그리드나 다차원 통...</p>
-        </a>
-      
+<header>
+    <div class="header-container">
+        <div class="logo">Hongdae Bro</div>
+        <nav>
+            <a href="index.html">홈</a>
+            <a href="about.html">소개</a>
+            <a href="blog.html">블로그</a>
+        </nav>
+    </div>
+</header>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h3>
-          <p>디즈니의 풀 애니메이션(초당 24장)에 대비되는 동양 리미티드 애니메이션의 정수인 3코마 작화법(초당 8장 기법)은 프레임의 부족함을 독창적인 프레임 홀드 타이밍과 과장된 정지 컷...</p>
-        </a>
-      
+<section class="hero">
+    <h1>홍대 유흥 후기 <span>리얼 팩트 폭행</span></h1>
+    <p>삐까뻔쩍한 광고에 지친 형들을 위한 진짜 생생 정보! 호갱 안 당하고 가성비 챙기면서 제대로 노는 형들의 생존 가이드.</p>
+    <a href="tel:010-6279-0862" class="cta-btn">실시간 예약/상담: 010-6279-0862</a>
+</section>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
+<div class="main-content">
+    <section class="intro-section">
+        <h2>내돈내산으로 털어놓는 홍대의 밤</h2>
+        <p>어이 형들, 반가워! 홍대 밤거리에서 수천만 원 태워가면서 깨달은 진짜 유용한 유흥 후기를 나누려고 판을 깔았어. 대형 포털 사이트나 SNS에 도배된 영혼 없는 바이럴 광고글에 낚여서 지갑 탈탈 털리고 기분 잡친 적 한두 번이 아니지? 나도 다 겪어봤어. 그래서 내가 직접 몸소 부딪치고 깨지면서 얻은 100% 리얼 정보만 골라서 형들한테 가감 없이 풀어줄게.</p>
+        <p>홍대는 매번 핫플레이스가 바뀌고 트렌드가 미친 속도로 흘러가잖아. 힙합 클럽부터 시작해서 아재 감성 풍기는 가라오케, 요즘 뜨는 셔츠룸까지! 각 업소별 분위기, 가격대, 수질까지 한눈에 보기 쉽게 싹 다 긁어모아 놨어. 쓸데없이 거품 낀 비용 다 걷어내고 정직하게 노는 법을 알고 싶다면 제대로 찾아온 거야.</p>
+    </section>
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
+    <div class="info-bar">
+        🔥 홍대 유흥 실시간 예약 & 견적 상담: <a href="tel:010-6279-0862">010-6279-0862</a> (브로 소통)
+    </div>
+
+    <section class="intro-section">
+        <h2>홍대 밤문화 삼국지: 장르별 핵심 가성비 분석</h2>
+        <p>솔직히 홍대 오면 크게 세 가지 장르로 나뉘지. 클럽, 감성주점, 그리고 본격 가라오케/셔츠룸 계열. 각 구역마다 장단점이 극명하니까 형들 성향에 맞춰서 골라 가야 시간 낭비, 돈 낭비 안 한다고. 아래 요점 정리 싹 해둘 테니까 이동 전에 참고해봐.</p>
+        
+        <div class="card-grid">
+            <div class="card">
+                <h3>1. 감성주점 & 클럽</h3>
+                <p>20대 초중반 친구들의 성지. 가성비는 좋지만 웨이팅 헬이고, 솔직히 나이 좀 있는 형들은 들어가면 눈치 보임. 기 빨리고 춤만 주구장창 추다 올 거 아니면 주말에는 비추천한다. 기력을 챙기자 브로.</p>
+            </div>
+            <div class="card">
+                <h3>2. 럭셔리 가라오케</h3>
+                <p>지인들 모임이나 생일 파티 할 때 깔끔하게 대접받고 싶다면 정답. 정찰제 시스템이 많아서 호갱 당할 확률이 비교적 적고, 시설이 아주 고오급스러움. 음향 장비 빵빵하게 챙겨서 목청 터져라 부르기 딱 좋음.</p>
+            </div>
+            <div class="card">
+                <h3>3. 가성비 셔츠룸</h3>
+                <p>일반 노래방이나 가라오케의 지루함을 완전히 날려버릴 최고의 선택지. 요즘 홍대 쪽에서 미친 듯이 성행하고 있음. 확실한 매니저들의 마인드와 밀착 서비스 덕분에 내돈내산 만족도 200% 보장하는 트렌디 장르임.</p>
+            </div>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+    </section>
+
+    <section class="reviews-section">
+        <h2>홍대 주민 형들의 생생 후기 한마디</h2>
+        
+        <div class="review-card">
+            <p>"인터넷에서 홍대 유흥 후기 검색하다가 맨날 광고판이라 좌절했는데, 여기 브로 덕분에 진짜 저렴하게 풀코스로 제대로 달렸습니다. 눈탱이 하나도 없고 사장님이 너무 털털해서 단골 찜했습니다."</p>
+            <div class="review-author">- 마포구 헬스보이 (31세)</div>
+        </div>
+
+        <div class="review-card">
+            <p>"가라오케 예약 잡을 때 주말이라 걱정했는데 대기 시간 1도 없이 초특급 VIP 서비스로 들어갔네요. 안내해주신 꿀팁대로 노니까 술값도 생각보다 엄청 아꼈음. 최고예요!"</p>
+            <div class="review-author">- 홍대 직장인 김씨 (29세)</div>
+        </div>
+
+        <div class="review-card">
+            <p>"셔츠룸 시스템 처음 접해봤는데 다른 곳이랑 마인드 수준이 다릅니다. 이 가격에 이 정도 만족감이면 주말마다 도장깨기 하러 올 수밖에 없겠네요. 완전 추천합니다!"</p>
+            <div class="review-author">- 신촌 프로밤손님 (34세)</div>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <h2>호갱 탈출 3대 생존 강령</h2>
+        <p>홍대 밤거리를 다니다 보면 수많은 삐끼들이 유혹하지. 이들의 달콤한 말에 속아 아무 데나 따라갔다가는 계산서 보고 영혼까지 탈곡당하기 십상이야. 아래 세 가지만 딱 기억하고 다녀라.</p>
+        <p>첫째, 길거리 삐끼는 99.9% 거른다. 수수료 떼먹는 구조라 무조건 비싸짐. 둘째, 가기 전에 미리 예약 전화를 넣고 확실한 정찰제 가격을 확인해라. 셋째, 신뢰할 만한 로컬 부장이나 실장 번호를 한두 개 따서 직통으로 뚫어라. 그게 제일 편하고 싸게 먹힌다.</p>
+    </section>
+</div>
+
+<footer>
+    <p>상호: 홍대 브로 정보 센터 | 대표자: 홍대형님</p>
+    <p>문의 직통 전화: <strong>010-6279-0862</strong> (부재 시 문자 필수)</p>
+    <p>&copy; 2026 Hongdae Bro. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
+</footer>
+
 </body>
 </html>
